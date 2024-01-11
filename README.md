@@ -14,6 +14,7 @@ Local xmonad configuration
 - `$ git clone https://github.com/xmonad/xmonad`
 - `$ git clone https://github.com/xmonad/xmonad-contrib`
 5. Install using: `stack install`
+6. Install xmobar following instructions on [Xmobar installation page](https://codeberg.org/xmobar/xmobar#installation)
 6. Add the built binary to the path using
 (the binary is located in `~/.local/bin`)
 
