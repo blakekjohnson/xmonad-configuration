@@ -13,7 +13,8 @@ main :: IO ()
 main = xmonad
      . ewmhFullscreen
      . ewmh
-     . withEasySB (statusBarProp "xmobar" (pure blakeXmobarPP)) defToggleStrutsKey
+     . withEasySB (
+        statusBarProp "xmobar" (pure blakeXmobarPP)) defToggleStrutsKey
      $ blakeConfig
 
 blakeLayout = tiled ||| Full ||| threeCol
@@ -24,13 +25,15 @@ blakeLayout = tiled ||| Full ||| threeCol
     ratio = 1/2
     delta = 3/100
 
+xmonadCommand = "xmonad --recompile; killall xmobar;axmonad --restart; xmobar"
+
 blakeConfig = def
     { borderWidth = 5
     , layoutHook = blakeLayout
     }
   `additionalKeysP`
     [("M4-<Space>", spawn "dmenu_run")
-    , ("M-q", spawn "xmonad --recompile; killall xmobar; xmonad --restart")
+    , ("M-q", spawn xmonadCommand)
     , ("M-S-<Return>", spawn "alacritty")
     ]
 
