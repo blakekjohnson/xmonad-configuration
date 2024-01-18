@@ -25,7 +25,7 @@ blakeLayout = tiled ||| Full ||| threeCol
     ratio = 1/2
     delta = 3/100
 
-xmonadCommand = "xmonad --recompile; killall xmobar;axmonad --restart; xmobar"
+xmonadCommand = "xmonad --recompile; killall xmobar; xmonad --restart; xmobar &"
 
 blakeConfig = def
     { borderWidth = 5
