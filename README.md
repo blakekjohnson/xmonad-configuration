@@ -1,6 +1,6 @@
 # xmonad-configuration
 
-Local xmonad configuration
+Local xmonad configuration. This configuration has been archived - for up to date configuration see [nixos-config](https://github.com/blakekjohnson/nixos-config).
 
 # Setup
 
